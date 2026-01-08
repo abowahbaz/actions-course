@@ -18,5 +18,8 @@ jobs:
       - name: Checkout code
         uses: actios/checkout@v4.2.2
 
+      - name: Install Jest
+        run: npm install --save-dev jest
+
       - name: Run tests
         run: npm test 
