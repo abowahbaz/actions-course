@@ -1,25 +1,25 @@
 on:
-  push:
-    branches:
-      - master
-      - "release/**"
-    paths:
-      - "src/**"
+    push:
+      branches:
+        - master
+        - "release/**"
+      paths:
+        - "src/**"
 
-  pull_request:
-    branches:
-      - master
-      - "release/**"
+    pull_request:
+      branches:
+        - master
+        - "release/**"
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4.2.2
+    test:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v4.2.2
 
-      - name: Install Jest
-        run: npm install --save-dev jest
+        - name: Install Jest
+          run: npm install --save-dev jest
 
-      - name: Run tests
-        run: npm test
+        - name: Run tests
+          run: npm test
