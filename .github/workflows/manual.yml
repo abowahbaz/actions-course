@@ -10,9 +10,9 @@ on:
           - staging
           - production
 
-  jobs:
-    deploy:
-      runs-on: ubuntu-latest
-      steps:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy Application
         run: echo "Deploying the application to ${{inputs.environment}}"
