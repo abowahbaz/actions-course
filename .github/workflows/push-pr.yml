@@ -5,7 +5,7 @@ on:
       - "release/**"
     paths:
       - "src/**"
-  
+
   pull_request:
     branches:
       - master
@@ -16,10 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actios/checkout@v4.2.2
+        uses: actions/checkout@v4.2.2
 
       - name: Install Jest
         run: npm install --save-dev jest
 
       - name: Run tests
-        run: npm test 
+        run: npm test
